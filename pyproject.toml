@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "nimbus-gpt"
+version = "0.1.0"
+description = "A rent estimate GPT assistant"
+authors = ["Henry Ugochukwu <phalcon.vee@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^3.0.0"
+functions = "^0.7.0"
+openai = "^1.2.3"
+packaging = "^23.2"
+requests = "^2.31.0"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
